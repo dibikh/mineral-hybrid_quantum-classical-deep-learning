@@ -1,0 +1,19 @@
+﻿cff-version: 1.2.0
+message: "If you use this code, please cite it."
+title: "Regime-Aware Mineral Price Prediction via Hybrid Quantum–Classical Deep Learning"
+type: software
+authors:
+  - family-names: Dhibi
+    given-names: Khaled
+  - family-names: Mohamed
+    given-names: Aseel
+  - family-names: Hasoneh
+    given-names: Osama
+  - family-names: Ayeche
+    given-names: Mohamed Rami
+  - family-names: El-Mellouhi
+    given-names: Fadwa
+date-released: 2026-02-07
+license: MIT
+repository-code: "https://github.com/dibikh/mineral-hybrid_quantum-classical-deep-learning"
+
