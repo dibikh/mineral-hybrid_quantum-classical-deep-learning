@@ -5,7 +5,7 @@ This repository provides **data preprocessing**, **training**, **inference**, an
 - **QBiLSTM** (quantum-gated recurrent model)
 - **Hybrid** (gated fusion of BiLSTM + QBiLSTM)
 
-It also includes scripts to reproduce **Table 1** and the **paper figures only** (Figs. 2–11).
+
 
 ## Quickstart
 
@@ -41,12 +41,13 @@ bash scripts/run_all.sh
 Outputs are written to `outputs/`:
 - `outputs/predictions_test.csv`
 - `outputs/table1_metrics.csv` (+ `outputs/table1_metrics.tex`)
-- `outputs/figures/*.png` (Figs. 2–11 only)
+- `outputs/figures/*.png` 
 
 ## Reproducibility
 All scripts accept `--seed` (default: 42) and set seeds for Python/NumPy/TensorFlow/PyTorch.
 
 ## Data & Code Availability statement (paste into the manuscript)
 See `DATA_CODE_AVAILABILITY.md`.
+
 
 
