@@ -1,0 +1,56 @@
+# configs/lithium.yaml
+# =========================================================
+# Lithium carbonate 2018-2025  |  Multivariate BiLSTM
+# Split: 60% train / 10% val / 30% test (chronological)
+# =========================================================
+
+data:
+  raw_csv: data/raw/lithium.csv          # OHLC export (Symbol,Date,Open,High,Low,Close)
+  processed_csv: data/processed/lithium_processed.csv  # kept for legacy make_figures
+  window: 175
+  train_ratio: 0.60
+  val_ratio:   0.10
+  # test_ratio = 1 - train_ratio - val_ratio = 0.30 (implicit)
+  use_engineered_features: true
+  feature_cols:
+    - Open
+    - High
+    - Low
+    - Close
+    - HL_range
+    - OC_change
+    - log_return
+    - close_diff
+    - ma_5
+    - std_5
+
+paths:
+  models_dir:    outputs/models
+  artifacts_dir: outputs/artifacts
+  outputs_dir:   outputs
+
+bilstm:
+  units:      64
+  lr:         0.001
+  epochs:     30
+  batch_size: 32
+  patience:   3
+
+qbilstm:
+  hidden_dim:    4
+  num_qubits:    3
+  quantum_depth: 1
+  lr:            0.01
+  epochs:        10
+  batch_size:    32
+
+hybrid:
+  classical_hidden_dim:  50
+  classical_num_layers:   2
+  quantum_hidden_dim:     4
+  num_qubits:             3
+  quantum_depth:          1
+  gate_hidden:           32
+  lr:                   0.005
+  epochs:                10
+  batch_size:            32
